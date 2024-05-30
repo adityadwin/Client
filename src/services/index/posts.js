@@ -15,7 +15,7 @@ export const getAllPosts = async (searchKeyword = "", page = 1, limit = 10) => {
 
 export const getSinglePost = async ({ slug }) => {
   try {
-    const { data } = await axios.get(`/api/posts/${slug}`);
+    const { data } = await axios.get(`https://server-1-01dn.onrender.com/api/posts/${slug}`);
     return data;
   } catch (error) {
     if (error.response && error.response.data.message)
@@ -32,7 +32,7 @@ export const deletePost = async ({ slug, token }) => {
       },
     };
 
-    const { data } = await axios.delete(`/api/posts/${slug}`, config);
+    const { data } = await axios.delete(`https://server-1-01dn.onrender.com/api/posts/${slug}`, config);
     return data;
   } catch (error) {
     if (error.response && error.response.data.message)
@@ -49,7 +49,7 @@ export const updatePost = async ({ updatedData, slug, token }) => {
       },
     };
 
-    const { data } = await axios.put(`/api/posts/${slug}`, updatedData, config);
+    const { data } = await axios.put(`https://server-1-01dn.onrender.com/api/posts/${slug}`, updatedData, config);
     return data;
   } catch (error) {
     if (error.response && error.response.data.message)
@@ -66,7 +66,7 @@ export const createPost = async ({ token }) => {
       },
     };
 
-    const { data } = await axios.post(`/api/posts`, {}, config);
+    const { data } = await axios.post(`https://server-1-01dn.onrender.com/api/posts`, {}, config);
     return data;
   } catch (error) {
     if (error.response && error.response.data.message)
