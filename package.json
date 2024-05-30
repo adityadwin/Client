@@ -2,7 +2,7 @@
   "name": "gaketa-client-app",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:5000",
+  "proxy": "https://server-1-01dn.onrender.com",
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.3",
     "@tanstack/react-query": "^4.28.0",
